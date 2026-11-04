@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wechat-log"
+version = "0.1.0"
+description = "从本机微信 4.0 本地数据导出聊天记录（单聊/群聊）为 HTML、CSV、JSON、TXT、PDF。"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "217" }]
+dependencies = [
+    "PySide6>=6.6",
+    "pycryptodome>=3.19",
+    "psutil>=5.9",
+    "Jinja2>=3.1",
+    "zstandard>=0.22",
+    "pilk>=0.2",
+    "typing_extensions>=4.6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.4", "pyinstaller>=6.0"]
+
+[project.scripts]
+wechat_log = "wechat_log.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wechat_log"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "W"]
+ignore = ["E501"]
