@@ -67,11 +67,11 @@ wechat_log
 
 ```
 导出结果\
-├─ 杨浩.pdf / 杨浩.html / 杨浩.txt / 杨浩.csv / 杨浩.json
-└─ 媒体\杨浩\
-   ├─ 20250907_190325_02.jpg
-   ├─ 20250905_225830_01.wav
-   └─ 附件1 2024年邮爱奖学金申请表.docx
+├─ Xx.pdf / xx.html / xx.txt / xx.csv / xx.json
+└─ 媒体\xx\
+   ├─ 2xxxx07_1xxxx5_02.jpg
+   ├─ 2xxxxx5_2xxxx0_01.wav
+   └─ 附件1 2024年xxxx.docx
 ```
 
 ## 原理简述
